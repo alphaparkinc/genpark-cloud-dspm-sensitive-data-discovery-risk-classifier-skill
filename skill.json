@@ -1,0 +1,38 @@
+{
+  "name": "genpark-cloud-dspm-sensitive-data-discovery-risk-classifier-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Cloud data security posture management (DSPM) discovery engine classifying PII/PHI/PCI data and enforcing automated least-privilege IAM policies.",
+  "author": "genpark",
+  "category": "cybersecurity",
+  "tags": [
+    "dspm",
+    "data-security",
+    "pii-classification",
+    "cloud-posture",
+    "cyera"
+  ],
+  "inputs": {
+    "cloud_account_arn": {
+      "type": "string"
+    },
+    "storage_target": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "dspm_audit_id": {
+      "type": "string"
+    },
+    "pii_financial_phi_entities_classified": {
+      "type": "integer"
+    },
+    "gdpr_hipaa_pci_dss_compliance_score_pct": {
+      "type": "number"
+    },
+    "automated_least_privilege_iam_policy_generated": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
